@@ -1,0 +1,21 @@
+@startuml
+package "Routes/Repository"{
+[vendor.js]
+[osce.js]
+
+}
+package "Servicios"{
+[app.js]
+}
+
+
+package "Clientes/API"{
+[municipalidad.js]
+}
+[vendor.js] --> [app.js]
+[app.js] --> [vendor.js]
+[app.js] --> [municipalidad.js]
+[municipalidad.js] --> [app.js]
+[app.js] --> [osce.js]
+[osce.js] --> [app.js]
+@enduml
